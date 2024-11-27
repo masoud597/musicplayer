@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#242323"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/playBtn"
+        android:layout_width="194dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="60dp"
+        android:background="#00242323"
+        android:contentDescription="Play"
+        android:onClick="onPlayClick"
+        android:scaleType="fitCenter"
+        android:translationZ="1dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play"
+        app:tint="#4CAF50" />
+
+    <ImageButton
+        android:id="@+id/pauseBtn"
+        android:layout_width="194dp"
+        android:layout_height="86dp"
+        android:layout_marginBottom="60dp"
+        android:background="#00FFFFFF"
+        android:contentDescription="Play"
+        android:onClick="onPauseClick"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_media_pause"
+        app:tint="#4CAF50" />
+
+    <SeekBar
+        android:id="@+id/songTime"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="80dp"
+        android:progress="50"
+        android:progressTint="#4CAF50"
+        android:scrollbarSize="4dp"
+        android:thumbTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/playBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/currentTime"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="44dp"
+        android:text="00:00"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/playBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songTime" />
+
+    <TextView
+        android:id="@+id/songLength"
+        android:layout_width="65dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="44dp"
+        android:text="01:23"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/playBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/songTime" />
+
+    <ImageView
+        android:id="@+id/songCover"
+        android:layout_width="385dp"
+        android:layout_height="380dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="25dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <ImageButton
+        android:id="@+id/muteVolume"
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="73dp"
+        android:background="#00101010"
+        android:backgroundTintMode="multiply"
+        android:contentDescription="Mute"
+        android:onClick="onMuteClick"
+        android:scaleType="center"
+        android:tintMode="multiply"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/playBtn"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+        app:tint="#4CAF50" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
